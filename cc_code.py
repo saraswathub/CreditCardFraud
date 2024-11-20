@@ -1,3 +1,6 @@
+
+$ pip install sklearn==0.24.2 imbalanced-learn numpy pandas matplotlib seaborn
+
 # Importing modules 
 import numpy as np
 import pandas as pd
