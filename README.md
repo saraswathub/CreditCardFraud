@@ -62,72 +62,71 @@ pip install sklearn==0.24.2 imbalanced-learn numpy pandas matplotlib seaborn
 
 
 ## Data Exploration
-Fraud Case Distribution:
 
-    Fraudulent and valid transactions were counted and compared.
-    Proportion of fraudulent transactions was calculated.
+### Fraud Case Distribution:
+- Fraudulent and valid transactions were counted and compared.  
+- Proportion of fraudulent transactions was calculated.
 
-Distribution of Features:
+### Distribution of Features:
+- KDE plots were created to visualize the distribution of `Time` and `Amount`.
 
-    KDE plots were created to visualize the distribution of Time and Amount.
+### Missing Values Check:
+- Confirmed there were no missing values in the dataset.
 
-Missing Values Check:
+---
 
-    Confirmed there were no missing values in the dataset.
+## Feature Scaling and Engineering
 
-## Feature Scaling and Engineering Scaling:
+### Scaling:
+- Used `RobustScaler` to scale `Time` and `Amount` to reduce the impact of outliers.
 
-    Used RobustScaler to scale Time and Amount to reduce the impact of outliers.
+### Outlier Removal:
+- Outliers were removed using the IQR method.
 
-Outlier Removal:
+### Feature Reordering:
+- `Time` and `Amount` were placed at the beginning of the dataset for easier access.
 
-    Outliers were removed using the IQR method.
-
-Feature Reordering:
-
-    Time and Amount were placed at the beginning of the dataset for easier access.
+---
 
 ## Modeling and Evaluation
-Train-Test Split:
 
-    Dataset was split into 80% training and 20% testing subsets.
+### Train-Test Split:
+- Dataset was split into 80% training and 20% testing subsets.
 
-Metrics Used:
+### Metrics Used:
+- Accuracy, Precision, Recall, F1-Score, and AUC-ROC were used for evaluation.
 
-    Accuracy, Precision, Recall, F1-Score, and AUC-ROC were used for evaluation.
+### Cross-Validation:
+- Stratified k-fold cross-validation was applied for robust model evaluation.
 
-Cross-Validation:
-
-    Stratified k-fold cross-validation was applied for robust model evaluation.
+---
 
 ## Handling Imbalanced Data
-Undersampling:
 
-    NearMiss undersampling technique was used to reduce the size of the majority class.
+### Undersampling:
+- `NearMiss` undersampling technique was used to reduce the size of the majority class.
 
-Oversampling:
+### Oversampling:
+- `SMOTE` oversampling technique was employed to synthetically increase the size of the minority class.
 
-    SMOTE oversampling technique was employed to synthetically increase the size of the minority class.
+---
 
 ## Visualizations
-Key Visualizations:
 
-    KDE plots for Time and Amount.
-    Boxplots for features.
-    Distributions of all features for Fraudulent vs Genuine transactions.
-    ROC curves for various models.
+### Key Visualizations:
+1. KDE plots for `Time` and `Amount`.  
+2. Boxplots for features.  
+3. Distributions of all features for Fraudulent vs Genuine transactions.  
+4. ROC curves for various models.
+
+---
 
 ## How to Run
 
-    Clone the repository:
-
-git clone https://github.com/your-repository/credit-card-fraud-detection.git
-cd credit-card-fraud-detection
-
-Install dependencies:
-
-pip install -r requirements.txt
-
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/your-repository/credit-card-fraud-detection.git
+   cd credit-card-fraud-detection
 Run the script:
 
     python fraud_detection.py
