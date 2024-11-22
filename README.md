@@ -129,7 +129,7 @@ pip install sklearn==0.24.2 imbalanced-learn numpy pandas matplotlib seaborn
    cd credit-card-fraud-detection
 Run the script:
 
-    python fraud_detection.py
+    python cc_code.py
 
 ## Conclusion
 
